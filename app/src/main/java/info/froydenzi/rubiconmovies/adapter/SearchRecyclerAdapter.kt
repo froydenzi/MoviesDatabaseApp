@@ -39,7 +39,10 @@ class SearchRecyclerAdapter(private val search: searchModel) :
             holder.searchType.text = holder.itemView.resources.getString(R.string.movie)
             holder.searchItem.setOnClickListener {
                 val idMovie = search.results[position].id
-                val action = SearchFragmentDirections.actionSearchFragmentToSingleCallFragment(idMovie, "movie")
+                val action = SearchFragmentDirections.actionSearchFragmentToSingleCallFragment(
+                    idMovie,
+                    "movie"
+                )
                 holder.itemView.findNavController().navigate(action)
             }
         } else if (search.results[position].media_type == "tv") {
@@ -47,7 +50,10 @@ class SearchRecyclerAdapter(private val search: searchModel) :
             holder.searchType.text = holder.itemView.resources.getString(R.string.serie)
             holder.searchItem.setOnClickListener {
                 val idSerie = search.results[position].id
-                val action = SearchFragmentDirections.actionSearchFragmentToSingleCallFragment(idSerie, "serie")
+                val action = SearchFragmentDirections.actionSearchFragmentToSingleCallFragment(
+                    idSerie,
+                    "serie"
+                )
                 holder.itemView.findNavController().navigate(action)
             }
         }

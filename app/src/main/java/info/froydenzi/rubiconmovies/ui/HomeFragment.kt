@@ -29,7 +29,8 @@ class HomeFragment : Fragment() {
         binding.fragmentMenu.setupWithViewPager(binding.viewPager2)
 
         binding.floatingActionButton.setOnClickListener {
-            binding.root.findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToSearchFragment())
+            binding.root.findNavController()
+                .navigate(HomeFragmentDirections.actionHomeFragmentToSearchFragment())
         }
         return binding.root
     }

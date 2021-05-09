@@ -18,7 +18,7 @@ class TvShowViewModel : ViewModel() {
             retrofitRepository.getSeries().subscribe({
                 mySerieResponse.value = it
             }, {
-                Log.d("RESPONSE HANDLER",it.toString())
+                Log.d("RESPONSE HANDLER", it.toString())
                 mySerieResponse.value = null
             })
         }

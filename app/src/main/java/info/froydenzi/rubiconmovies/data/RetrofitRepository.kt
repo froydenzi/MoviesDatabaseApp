@@ -4,7 +4,6 @@ import info.froydenzi.rubiconmovies.data.model.*
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
-import retrofit2.http.Query
 
 class RetrofitRepository {
 
@@ -32,7 +31,7 @@ class RetrofitRepository {
             .observeOn(AndroidSchedulers.mainThread())
     }
 
-    fun getSearchQuery(search_item: String) : Observable<searchModel>{
+    fun getSearchQuery(search_item: String): Observable<searchModel> {
         return RetrofitInstance.apiCall.getSearchQuery(search_item)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())

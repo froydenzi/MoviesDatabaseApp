@@ -18,7 +18,7 @@ class MoviesViewModel : ViewModel() {
             retrofitRepository.getMovies().subscribe({
                 myMovieResponse.value = it
             }, {
-                Log.d("RESPONSE HANDLER",it.toString())
+                Log.d("RESPONSE HANDLER", it.toString())
                 myMovieResponse.value = null
             })
         }
