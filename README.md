@@ -1,7 +1,4 @@
 # MoviesDatabaseApp
-
-Hello RUBICON team,
-
 In this application developement I used the following tools:
 
 ViewBinding
